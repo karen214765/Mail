@@ -1,5 +1,6 @@
 set :application, "Mail"
 set :repository,  "git@github.com:karen214765/Mail.git"
+set :branch,'master'
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`

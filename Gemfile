@@ -7,7 +7,7 @@ gem 'rails', '3.0.3'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
-gem 'capistrano'
+gem 'capistrano', '2.9.0'
 gem 'jruby-openssl'
 
 # Use unicorn as the web server
