@@ -1,0 +1,35 @@
+<%= form_for(@correo) do |f| %>
+  <% if @correo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@correo.errors.count, "error") %> prohibited this correo from being saved:</h2>
+
+      <ul>
+      <% @correo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<% @correo_plantillas.each do |plantilla| %>
+  <%= plantilla.asunto %>
+<%end%>
+
+  <div class="field">
+    <%= f.label :usuario %><br />
+    <%= f.text_field :usuario %>
+  </div>
+
+  <div class="field">
+    <%= f.label :asunto %><br />
+    <%= f.text_field :asunto %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mensaje %><br />
+    <%= f.textarea :mensaje %>
+  </div>
+<div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

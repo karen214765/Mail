@@ -1,0 +1,23 @@
+<h1>Listing correos</h1>
+
+<table>
+  <tr>
+    <th>Asunto</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @correos.each do |correo| %>
+  <tr>
+    <td><%= correo.asunto %></td>
+    <td><%= link_to 'Show', correo %></td>
+    <td><%= link_to 'Edit', edit_correo_path(correo) %></td>
+    <td><%= link_to 'Destroy', correo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Correo', new_correo_path %>

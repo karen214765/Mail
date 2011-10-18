@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+   
+    <% plantilla={} %>
+    <% plantilla['$[SALUDO]']='Hola' %>
+    <% plantilla['$[TEMA]']='convocatoria' %>
+    <% plantilla['$[NOMBRE]']='Karen Villa' %>
+    <% new='' %>
+    <%@correo_plantilla.mensaje.split(" ").each do |palabra|%>
+      <% if plantilla.has_key?(palabra)%>
+        <%new= new+' '+plantilla[palabra]%>
+      <%else%>
+        <%new=new+' '+palabra%>
+      <%end%>
+    <%end%>
+    <p> <%= new %></p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>

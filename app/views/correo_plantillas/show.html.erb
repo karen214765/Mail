@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Asunto:</b>
+  <%= @correo_plantilla.asunto %>
+</p>
+
+
+<%= link_to 'Edit', edit_correo_plantilla_path(@correo_plantilla) %> |
+<%= link_to 'Back', correo_plantillas_path %>

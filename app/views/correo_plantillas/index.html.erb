@@ -1,0 +1,24 @@
+<h1>Listing correo_plantillas</h1>
+
+<table>
+  <tr>
+    <th>Asunto</th>
+    <th>Mensaje</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @correo_plantillas.each do |correo_plantilla| %>
+  <tr>
+    <td><%= correo_plantilla.asunto %></td>
+    <td><%=correo_plantilla.mensaje%></td>
+    <td><%= link_to 'Show', correo_plantilla %></td>
+    <td><%= link_to 'Edit', edit_correo_plantilla_path(correo_plantilla) %></td>
+    <td><%= link_to 'Destroy', correo_plantilla, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Correo plantilla', new_correo_plantilla_path %>
